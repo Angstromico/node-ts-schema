@@ -1,68 +1,144 @@
-# Node.js + TypeScript Starter Template
+# 🚀 Node.js + TypeScript Starter
 
-This repository is a basic starter template for `Node.js` projects using TypeScript. It includes essential configurations and scripts to streamline your development workflow.
+A **minimal** Node.js + TypeScript starter template for learning and development. Pre-configured with modern tooling so you can focus on writing code, not setting up your environment.
+
+## ✨ What's Included
+
+- **🔷 TypeScript** - Strict type checking configured
+- **⚡ tsx** - Instant run without compilation (`npm run dev`)
+- **🧪 Vitest** - Fast testing framework
+- **📏 ESLint + Prettier** - Code quality and formatting
+- **🪝 Husky** - Pre-commit hooks (optional)
+- **🎯 Path Aliases** - Use `@/` instead of `../../`
+
+## 📋 Prerequisites
+
+- **Node.js** >= 18.0.0
+- **npm** >= 9.0.0
+
+## 🛠️ Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development (hot-reload)
+npm run dev
+
+# Build for production
+npm run build
+
+# Run compiled code
+npm start
+```
+
+## 📜 Available Scripts
+
+| Script             | Description                           |
+| ------------------ | ------------------------------------- |
+| `npm run dev`      | Run with hot-reload (no build needed) |
+| `npm run build`    | Compile TypeScript to JavaScript      |
+| `npm start`        | Run compiled code                     |
+| `npm test`         | Run tests in watch mode               |
+| `npm run lint`     | Check code quality                    |
+| `npm run format`   | Format code with Prettier             |
+| `npm run validate` | Run all checks                        |
+
+## 📁 Project Structure
+
+```text
+src/
+└── index.ts    # Your code goes here
+```
+
+Keep it simple! Add files and folders as you learn and need them.
+
+## 🎯 Path Aliases
+
+Instead of messy relative imports:
+
+```typescript
+// ❌ Avoid
+import { something } from '../../../utils/something'
+
+// ✅ Use
+import { something } from '@/utils/something.js'
+```
+
+## 💡 Learning Tips
+
+### TypeScript Basics
+
+```typescript
+// Type annotations
+const name: string = 'John'
+const age: number = 25
+
+// Interfaces
+interface User {
+  name: string
+  age: number
+}
+
+// Functions with types
+function greet(user: User): string {
+  return `Hello, ${user.name}!`
+}
+```
+
+### Testing with Vitest
+
+Create a file like `src/example.test.ts`:
+
+```typescript
+import { describe, it, expect } from 'vitest'
+
+describe('example', () => {
+  it('should work', () => {
+    expect(1 + 1).toBe(2)
+  })
+})
+```
+
+Run tests:
+
+```bash
+npm test
+```
+
+## 🔧 Configuration Files
+
+- `tsconfig.json` - TypeScript configuration (strict mode enabled)
+- `eslint.config.mjs` - ESLint rules
+- `.prettierrc.json` - Code formatting rules
+- `vitest.config.ts` - Test configuration
+
+Feel free to modify these as you learn!
+
+## 🚀 Building for Production
+
+```bash
+npm run build   # Creates dist/ folder
+npm start       # Runs the compiled code
+```
+
+## 📚 Next Steps
+
+1. **Learn TypeScript basics** - Types, interfaces, generics
+2. **Practice with Node.js** - File system, HTTP, async/await
+3. **Write tests** - Use Vitest to test your code
+4. **Explore the tooling** - ESLint, Prettier, tsx
+
+## 📖 Resources
+
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [Node.js Documentation](https://nodejs.org/docs/latest/api/)
+- [Vitest Documentation](https://vitest.dev/)
+
+## 📄 License
+
+MIT
 
 ---
 
-# 📋 Features
-
-- **TypeScript Support**: Write your `Node.js `code in TypeScript for improved type safety.
-- **Auto-Rebuild and Restart**: Automatically compiles TypeScript and restarts the server when you make changes.
-- **Preconfigured Build and Watch Scripts**: Simple scripts for building and running the project in development mode.
-
----
-
-# 🛠️ Getting Started
-
-## Prerequisites
-
-- **Node.js**: Ensure you have `Node.js` installed (recommended version: >=14).
-- **npm**: Comes with `Node.js`, used to install dependencies.
-
-## Installation
-
-## 1. **Step 1: Clone and Install Dependencies**:
-
-```bash
-git clone <repository-url>
-cd <repository-folder>
-```
-
-## 2. **Step 2: Start Development with Watch**
-
-Run the project in development mode with automatic rebuilding and restarting on file changes:
-
-```bash
- npm install
-```
-
-This command will compile the TypeScript files in src/ into JavaScript files in the `dist/` directory, making it ready for deployment.
-
-## 3. **Step 3: Build for Production**
-
-When you’re ready to build the project for production, simply run:
-
-```bash
- npm run watch
-```
-
-### This command will:
-
-1. **Compile TypeScript files** to JavaScript in real-time as you make changes in src.
-   Restart the server automatically whenever changes are detected in the compiled `dist/` files.
-
-2. **Restart the server** automatically whenever changes are detected in the compiled dist/ files.
-
-## Step 4: Run Compiled Code
-
-```bash
- npm run dev
-```
-
-This will execute the `index.js` file in the `dist/` directory, which is the compiled entry point.
-
-## 📝 Notes
-
-1. The project is configured with `TypeScript` output targeting `ES2020` syntax.
-2. The module and moduleResolution are set to `NodeNext` to align with Node.js module standards.
-3. Adjust the compilerOptions in tsconfig.json as needed for your project requirements.
+**Happy Learning! 🎓**
